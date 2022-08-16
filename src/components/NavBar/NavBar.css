@@ -1,0 +1,53 @@
+.navBar {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  background-color: rgb(24, 24, 24);
+
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+.navBar .logo {
+  width: 75px;
+ 
+}
+
+.contenedorParrafos {
+  display: flex;
+  gap: 10px;
+}
+
+.navBar .contenedorParrafos p {
+  color: #cbd1d8;
+
+  font-weight: 600;
+}
+
+.navBar .contenedorParrafos .elArteDelBuenComer:hover {
+  cursor: pointer;
+  color: rgb(255, 115, 0);
+}
+
+.navBar ul {
+  margin-right: 50px;
+  display: flex;
+  gap: 50px;
+}
+
+.navBar ul li {
+  display: flex;
+  align-items: center;
+}
+
+.navBar ul li a {
+  color: #cbd1d8;
+  text-decoration: none;
+
+  font-weight: 600;
+}
+
+.navBar ul li a:hover {
+  color: rgb(255, 115, 0);
+}

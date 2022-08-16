@@ -1,0 +1,22 @@
+.containerInicio {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  z-index: 1;
+  align-items: center;
+  color: rgb(124, 124, 124);
+  font-size: 34px;
+  width: 100%;
+  background-color: #ff9d00;
+  background-image: url("https://fondosmil.com/fondo/24220.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.containerInicio h2 {
+  margin-top: 150px;
+}
+
+.img-logo {
+  width: 400px;
+}
