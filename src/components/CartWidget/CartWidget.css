@@ -1,6 +1,10 @@
-.shoppingCard{
+.carrito{
     width: 40px;
     height: 40px;
     cursor: pointer;
 
+}
+.carrito:hover{
+        border-radius:25%;
+        box-shadow: 0px 0px 5px 5px #000000;
 }

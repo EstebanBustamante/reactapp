@@ -1,4 +1,4 @@
-import cars from '../../images/logo.png'
+import logo from '../../images/logo.png'
 import "./NavBar.css";
 import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
@@ -7,22 +7,17 @@ function NavBar() {
   return (
     <div className="navBar">
       <Link to="/">
-        <img className="logo" src={cars} alt="cars-logo" />
+        <img className="logo" src={logo} alt="logo" />
       </Link>
-      <div className="contenedorParrafos">
-        <p className="elArteDelBuenComer">
-        El arte del buen comer
-        </p>
-      </div>
       <ul>
         <li>
-        <Link to="/productos">Productos</Link>
+        <Link to="/productos">Nuestra comida</Link>
         </li>
         <li>
-          <Link to="/categorias/Sandwitch">Categorias Por Comida </Link>
+          <Link to="/categorias/Sandwitch">Variedad</Link>
         </li>
         <li>
-          <a href="contacto.html">Contacto</a>
+          <a href="experiencia.html">Tu experiencia con nosotros</a>
         </li>
 
         <li>

@@ -25,3 +25,15 @@ h4 {
   width: 100%;
   height: 200px;
 }
+
+.btn{
+  border: 1px solid #000000; /*anchura, estilo y color borde*/
+padding: 10px; /*espacio alrededor texto*/
+background-color: rgb(255, 115, 0); /*color botón*/
+color: rgb(24, 24, 24); /*color texto*/
+text-decoration: none; /*decoración texto*/
+border-radius: 50px; /*bordes redondos*/
+}
+.btn:hover{
+  background-color: rgb(255, 177, 140);
+}

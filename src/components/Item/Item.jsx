@@ -18,7 +18,7 @@ export default function Item({ product, variedad, precio, imagen, Id }) {
         />
         <p>{precio}</p>
 
-        <Link to={`/detalles/${Id}`}>Ver Más</Link>
+        <Link class="btn" to={`/detalles/${Id}`}>Más información</Link>
 
       </div>
 

@@ -12,7 +12,7 @@ export default function ItemDetailContainer() {
 
             let itemRequired = ItemsData.find(elemente => elemente.id == Id);
 
-            itemRequired === undefined ? reject('No se encontro el Item solicitado') :
+            itemRequired === undefined ? reject('No se encontro la comida deseada') :
                 setTimeout(() => resolve(itemRequired), 2000)
         })
     };

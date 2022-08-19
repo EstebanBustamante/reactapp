@@ -1,5 +1,5 @@
-import add from "../../images/add.png";
-import remove from "../../images/remove.png";
+import add from "../../images/1.png";
+import remove from "../../images/2.png";
 import "./ItemCount.css";
 import Swal from "sweetalert2";
 import React, { useState } from "react";
@@ -17,8 +17,8 @@ export default function ItemCount({ cantidad, addCard, product }) {
       ? setCount(count + 1)
       : Swal.fire({
         icon: "error",
-        title: "Oops...",
-        text: `Solo puedes añadir hasta ${stock} productos`,
+        title: "Perdón",
+        text: `Solo podés pedir hasta ${stock} :( `,
       });
   };
 
@@ -31,7 +31,7 @@ export default function ItemCount({ cantidad, addCard, product }) {
       <img onClick={() => addItems()} src={add} alt="add" />
       <p> {count} </p>
       <img onClick={() => removeItems()} src={remove} alt="remove" />
-      <button onClick={() => addCard(product, count)}>Añadir al Carrito</button>
+      <button class="btn" onClick={() => addCard(product, count)}>Agregar compra</button>
     </div>
   );
 }

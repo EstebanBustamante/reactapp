@@ -2,8 +2,12 @@ import '../ItemDetail/ItemDetail.css'
 import ItemCount from "../ItemCount/ItemCount";
 import React, { useState } from "react";
 import Swal from "sweetalert2";
+import { useContext } from "react";
+import { cartContext } from "../../store/cartContex.js";
+import { Link } from "react-router-dom";
 
 export default function ItemDetail({ price, images, product, variedad, detalles, cant }) {
+  const { cart, addItem } = useContext(cartContext);
 
   const [state, setState] = useState(0);
 
@@ -11,12 +15,13 @@ export default function ItemDetail({ price, images, product, variedad, detalles,
     Swal.fire({
       position: "top-end",
       icon: "success",
-      title: `Añadiste ${cantidad} ${product} al carrito`,
+      title: `Agregaste ${cantidad} ${product} a tu pedido!! :D`,
       showConfirmButton: false,
-      timer: 1500,
+      timer: 1000,
     });
 
-    setState(cantidad)
+    setState(cantidad);
+    addItem(producto, cantidad);
   };
 
   return (
@@ -26,20 +31,18 @@ export default function ItemDetail({ price, images, product, variedad, detalles,
         <img src={images} alt='images-food' />
         <div className='item-detail-price'>
           <p>{detalles}</p>
-          <p>Cuando se trata de preparar tu {product} {variedad} no tenemos tiempo que perder. Nos enfocamos en poder cumplir los tiempos correctos para que no tengas que esperar.</p>
-          <p>Tu {product} {variedad} lo podés retirar en nuestro local, sino también hacemos envios a domicilio.</p>
+          <p>No te pierdas la posibilidad de probar un {product} {variedad}.  Te aseguramos una grata experiencia,    realizados con productos frescos. Retiralo o pedi que te lo mandemos!!</p>
           <div className="group-price-count">
-            <p>Disfrutalo solo por <span>{price}</span></p>
-            {state === 0 ?
-              <ItemCount cantidad={cant} addCard={addCard} product={product} />
-              :
-              <a href="/cart">Ir al carrito</a>
-            }
+            <p>Disfrutalo al precio de <span>{price}</span></p>
+            {cart.some((itemInCart) => itemInCart.item === product) === false ? ( 
+              <ItemCount cantidad={cant} addCard={addCard} product={product} />)
+              :(
+                <Link class="btn" to="/CartDetalleCompra">Ver compra</Link>)}
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 

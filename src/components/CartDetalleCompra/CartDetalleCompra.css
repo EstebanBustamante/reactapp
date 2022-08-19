@@ -1,0 +1,15 @@
+body{
+    background-color: rgb(24, 24, 24);
+}
+.detalleCompra div{
+    display:flex;
+    color:rgb(255, 115, 0);
+    gap: 25px;
+   justify-content:space-between;
+    align-items: center;
+}
+
+
+
+
+
