@@ -1,4 +1,4 @@
-.ItemDetailContainer {
+.ItemDetailContainer, .ItemDetailContainerInt {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,7 +9,7 @@
 h1 {
   margin: 0;
   padding: 10px 0;
-  background-color: rgb(43, 43, 43);
+  background-color: rgb(24, 24, 24);
   color: rgb(255, 115, 0);
   width: 100%;
   text-align: center;

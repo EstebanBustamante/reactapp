@@ -6,12 +6,12 @@ import { useContext } from "react";
 import { cartContext } from "../../store/cartContex.js";
 import { Link } from "react-router-dom";
 
-export default function ItemDetail({ price, images, product, variedad, detalles, cant }) {
-  const { cart, addItem } = useContext(cartContext);
+export default function ItemDetail({ price, images, product, variedad, detalles, cant, id, data }) {
+  const { addItem } = useContext(cartContext);
 
   const [state, setState] = useState(0);
 
-  const addCard = (producto, cantidad) => {
+  const addCard = (producto, cantidad, id, price) => {
     Swal.fire({
       position: "top-end",
       icon: "success",
@@ -21,7 +21,7 @@ export default function ItemDetail({ price, images, product, variedad, detalles,
     });
 
     setState(cantidad);
-    addItem(producto, cantidad);
+    addItem(producto, cantidad, id, price, data);
   };
 
   return (
@@ -34,8 +34,8 @@ export default function ItemDetail({ price, images, product, variedad, detalles,
           <p>No te pierdas la posibilidad de probar un {product} {variedad}.  Te aseguramos una grata experiencia,    realizados con productos frescos. Retiralo o pedi que te lo mandemos!!</p>
           <div className="group-price-count">
             <p>Disfrutalo al precio de <span>{price}</span></p>
-            {cart.some((itemInCart) => itemInCart.item === product) === false ? ( 
-              <ItemCount cantidad={cant} addCard={addCard} product={product} />)
+            {state === 0 ? ( 
+              <ItemCount cantidad={cant} addCard={addCard} product={product} id={id} price={price}/>)
               :(
                 <Link class="btn" to="/CartDetalleCompra">Ver compra</Link>)}
           </div>

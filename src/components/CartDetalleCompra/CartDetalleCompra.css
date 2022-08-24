@@ -1,15 +1,54 @@
+.swal2-container.swal2-center>.swal2-popup{
+    background-color: rgb(0, 0, 0);
+    color: rgb(117, 117, 117);
+  }
+  .swal2-loader{
+    border-color: #ff7300 transparent #ff7300 transparent !important;
+  }
+
 body{
     background-color: rgb(24, 24, 24);
 }
 .detalleCompra div{
     display:flex;
     color:rgb(255, 115, 0);
+    background-color:rgb(41, 41, 41);
+    border: 1px solid rgb(255, 115, 0);
     gap: 25px;
-   justify-content:space-between;
+    justify-content:space-between;
     align-items: center;
+    padding: 20px;
+    border-radius: 10px;
 }
+.detalleCompra{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 
-
+}
+.btn{
+    background-color:rgb(255, 115, 0);
+    padding: 10px;
+    border-radius: 10px;
+    color:rgb(41, 41, 41);
+    border: 2px solid rgb(0, 0, 0);
+    cursor: pointer;
+}
+.btn :hover{
+    background-color: rgb(255, 177, 140);
+}
+.btnDelete{
+    margin: 20px;
+    background-color:rgb(255, 115, 0);
+    padding: 10px;
+    border-radius: 10px;
+    color:rgb(41, 41, 41);
+    border: 2px solid rgb(0, 0, 0);
+    cursor: pointer;
+}
+.btnDelete:hover{
+    background-color: rgb(255, 177, 140);    
+}
 
 
 

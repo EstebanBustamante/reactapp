@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 import React, { useState } from "react";
 
 
-export default function ItemCount({ cantidad, addCard, product }) {
+export default function ItemCount({ cantidad, addCard, product, id, price}) {
 
   const [count, setCount] = useState(1);
 
@@ -31,7 +31,7 @@ export default function ItemCount({ cantidad, addCard, product }) {
       <img onClick={() => addItems()} src={add} alt="add" />
       <p> {count} </p>
       <img onClick={() => removeItems()} src={remove} alt="remove" />
-      <button class="btn" onClick={() => addCard(product, count)}>Agregar compra</button>
+      <button class="btn" onClick={() => addCard(product, count, id, price)}>Agregar compra</button>
     </div>
   );
 }

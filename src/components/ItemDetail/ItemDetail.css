@@ -1,3 +1,52 @@
+.swal2-container.swal2-top-end>.swal2-popup{
+  background-color: rgb(0, 0, 0);
+  color: rgb(117, 117, 117);
+}
+.swal2-icon.swal2-success .swal2-success-ring{
+  border: .25rem solid orange !important;
+  position: absolute;
+  z-index: 2;
+  top: -0.25em;
+  left: -0.25em;
+  box-sizing: content-box;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.swal2-icon.swal2-success {
+  border-color: orange !important;
+  color: orange !important;
+}
+.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-long{
+  background-color: orange;
+}
+.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-tip{
+  background-color: orange;
+}
+
+.swal2-container.swal2-center>.swal2-popup{
+  background-color: rgb(0, 0, 0);
+  color: rgb(117, 117, 117);
+}
+.swal2-styled.swal2-confirm:hover {
+  background-color: rgb(255, 123, 0);
+}
+button.swal2-styled.swal2-confirm{
+  background-color: orange;
+  color: black;
+  border-color:orange;
+}
+
+.swal2-icon.swal2-error.swal2-icon-show  {
+  border-color: rgb(255, 115, 0);
+  color: rgb(255, 115, 0);
+}
+.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left] {
+background-color: rgb(255, 123, 0);
+}
+.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right] {
+  background-color: rgb(255, 123, 0);
+  }
 h3 {
   margin: 0;
   padding-bottom: 20px;
@@ -6,7 +55,7 @@ h3 {
 .item-detail {
   display: flex;
   justify-content: center;
-  background-color: rgb(43, 43, 43);
+  background-color: rgb(24, 24, 24);
   color: rgb(255, 115, 0);
 
   flex-direction: column;
@@ -43,4 +92,3 @@ h3 {
   display: flex;
   flex-direction: column;
 }
-
