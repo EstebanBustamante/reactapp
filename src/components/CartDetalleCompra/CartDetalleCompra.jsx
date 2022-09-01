@@ -2,6 +2,7 @@ import  React, { useContext } from "react";
 import { cartContext } from "../../store/cartContex.js";
 import './CartDetalleCompra.css'
 import Swal from "sweetalert2";
+import UserForm from "../UserForm/UserForm.jsx";
 
 export default function CartDetalleCompra() {
 
@@ -63,7 +64,7 @@ export default function CartDetalleCompra() {
     <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", color: "orange" }}>
       <h2>Detalle de compras del carrito</h2>
       <div>
-        <button class="btnDelete" onClick={() => clear()} > Borrar Todo </button>
+        <button class="btnDelete" onClick={() => clear()} > Vaciar carrito </button>
       </div>
       <div className="detalleCompra">
         {cart.map((producto) => <div>
@@ -75,6 +76,14 @@ export default function CartDetalleCompra() {
         </div>)}
         <h4>{`TOTAL GENERAL: $ ${totalCantidadProductos.toFixed(2)}`}</h4>
       </div>
+      <UserForm 
+      
+      cart={cart}
+      cantidad = {totalCantidadProductos}
+      
+      />
+
+
     </div>
   );
 }

@@ -34,9 +34,9 @@ export default function ItemDetail({ price, images, product, variedad, detalles,
           <p>No te pierdas la posibilidad de probar un {product} {variedad}.  Te aseguramos una grata experiencia,    realizados con productos frescos. Retiralo o pedi que te lo mandemos!!</p>
           <div className="group-price-count">
             <p>Disfrutalo al precio de <span>{price}</span></p>
-            {state === 0 ? ( 
-              <ItemCount cantidad={cant} addCard={addCard} product={product} id={id} price={price}/>)
-              :(
+            {state === 0 ? (
+              <ItemCount cantidad={cant} addCard={addCard} product={product} id={id} price={price} />)
+              : (
                 <Link class="btn" to="/CartDetalleCompra">Ver compra</Link>)}
           </div>
         </div>

@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 import React, { useState } from "react";
 
 
-export default function ItemCount({ cantidad, addCard, product, id, price}) {
+export default function ItemCount({ cantidad, addCard, product, id, price }) {
 
   const [count, setCount] = useState(1);
 

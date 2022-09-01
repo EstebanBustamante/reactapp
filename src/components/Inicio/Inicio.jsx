@@ -7,7 +7,7 @@ export default function Inicio() {
         <div className="containerInicio">
             <h2>Bienvenidos a "El arte del buen comer"</h2>
             <h3>Un lugar para comer bien y disfrutar un buen momento.</h3>
-            <img className="img-logo" src={logo} />
+            <img className="img-logo" src={logo} alt="logo" />
         </div>
     )
 }

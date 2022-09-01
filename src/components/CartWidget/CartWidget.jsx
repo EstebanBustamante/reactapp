@@ -1,6 +1,6 @@
 import carrito from "../../images/burger-solid.svg";
 import "./CartWidget.css";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { cartContext } from "../../store/cartContex.js";
 import { Link } from "react-router-dom";
 
@@ -12,11 +12,9 @@ export default function CartWidget() {
   for (let iterador in cart) {
     quantityProductos += cart[iterador].quantity;
   }
-  setPrueba(
-
-    quantityProductos === 0 ? '' : quantityProductos
-
-  );
+  useEffect(() => {
+    setPrueba(quantityProductos === 0 ? '' : quantityProductos);
+  });
 
   return (
     <div style={{ display: 'flex', gap: '5px', justifyContent: 'center', alignItems: 'center' }}>

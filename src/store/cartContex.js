@@ -18,7 +18,7 @@ export default function CartProvider({ children }) {
       itemIndex.quantity += quantity;
       setCart(copyCart);
     }
-     else {
+    else {
 
       copyCart.push({ id, item, quantity, price });
       setCart(copyCart);
@@ -33,17 +33,17 @@ export default function CartProvider({ children }) {
 
   }
 
-    // funcion para buscar un item en base a su id
-    
-    function findItem(id) {
+  // funcion para buscar un item en base a su id
 
-      return (copyCart.find(item => item.id === Number(id)))
+  function findItem(id) {
 
-    }
+    return (copyCart.find(item => item.id === Number(id)))
 
-    return (
-      <cartContext.Provider value={{ cart, addItem, setCart, setPrueba, prueba }}>
-        {children}
-      </cartContext.Provider>
-    );
   }
+
+  return (
+    <cartContext.Provider value={{ cart, addItem, setCart, setPrueba, prueba }}>
+      {children}
+    </cartContext.Provider>
+  );
+}

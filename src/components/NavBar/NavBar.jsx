@@ -11,10 +11,10 @@ function NavBar() {
       </Link>
       <ul>
         <li>
-        <Link to="/productos">Nuestra comida</Link>
+          <Link to="/productos">Nuestra comida</Link>
         </li>
         <li>
-          <Link to="/categorias/Sandwitch">Variedad</Link>
+          <Link to="/categorias/Sandwich">Variedad</Link>
         </li>
         <li>
           <a href="experiencia.html">Tu experiencia con nosotros</a>

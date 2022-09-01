@@ -7,19 +7,20 @@ import Inicio from "./components/Inicio/Inicio"
 import CartProvider from "./store/cartContex";
 import CartDetalleCompra from "./components/CartDetalleCompra/CartDetalleCompra";
 
+
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <CartProvider>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Inicio />} />
-          <Route path="/productos" element={<ItemListContainer greeting="Gracias por confiar en El Arte!!" />} />
-          <Route path="/categorias/:idCategorias" element={<ItemListContainer />} />
-          <Route path="/detalles/:id" element={<ItemDetailContainer />} />
-          <Route path="/CartDetalleCompra" element={<CartDetalleCompra key={1}/>} />          
-        </Routes>
+        <CartProvider>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Inicio />} />
+            <Route path="/productos" element={<ItemListContainer />} />
+            <Route path="/categorias/:idCategorias" element={<ItemListContainer />} />
+            <Route path="/detalles/:id" element={<ItemDetailContainer />} />
+            <Route path="/CartDetalleCompra" element={<CartDetalleCompra key={1} />} />
+          </Routes>
         </CartProvider>
       </BrowserRouter>
     </div>
