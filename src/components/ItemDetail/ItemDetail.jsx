@@ -1,4 +1,4 @@
-import '../ItemDetail/ItemDetail.css'
+import "../ItemDetail/ItemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
 import React, { useState } from "react";
 import Swal from "sweetalert2";
@@ -6,7 +6,16 @@ import { useContext } from "react";
 import { cartContext } from "../../store/cartContex.js";
 import { Link } from "react-router-dom";
 
-export default function ItemDetail({ price, images, product, variedad, detalles, cant, id, data }) {
+export default function ItemDetail({
+  price,
+  images,
+  product,
+  variedad,
+  detalles,
+  cant,
+  id,
+  data,
+}) {
   const { addItem } = useContext(cartContext);
 
   const [state, setState] = useState(0);
@@ -25,24 +34,39 @@ export default function ItemDetail({ price, images, product, variedad, detalles,
   };
 
   return (
-    <div className='item-detail'>
-      <h3>{product} {variedad}</h3>
-      <div className='containerDetailsImg'>
-        <img src={images} alt='images-food' />
-        <div className='item-detail-price'>
+    <div className="item-detail">
+      <h3>
+        {product} {variedad}
+      </h3>
+      <div className="containerDetailsImg">
+        <img src={images} alt="images-food" />
+        <div className="item-detail-price">
           <p>{detalles}</p>
-          <p>No te pierdas la posibilidad de probar un {product} {variedad}.  Te aseguramos una grata experiencia,    realizados con productos frescos. Retiralo o pedi que te lo mandemos!!</p>
+          <p>
+            No te pierdas la posibilidad de probar un {product} {variedad}. Te
+            aseguramos una grata experiencia, realizados con productos frescos.
+            Retiralo o pedi que te lo mandemos!!
+          </p>
           <div className="group-price-count">
-            <p>Disfrutalo al precio de <span>{price}</span></p>
+            <p>
+              Disfrutalo al precio de <span>{price}</span>
+            </p>
             {state === 0 ? (
-              <ItemCount cantidad={cant} addCard={addCard} product={product} id={id} price={price} />)
-              : (
-                <Link class="btn" to="/CartDetalleCompra">Ver compra</Link>)}
+              <ItemCount
+                cantidad={cant}
+                addCard={addCard}
+                product={product}
+                id={id}
+                price={price}
+              />
+            ) : (
+              <Link class="btn" to="/CartDetalleCompra">
+                Ver compra
+              </Link>
+            )}
           </div>
         </div>
       </div>
     </div>
   );
 }
-
-

@@ -1,10 +1,6 @@
-import React from 'react'
-import './Spinner.css'
+import React from "react";
+import "./Spinner.css";
 
 export default function Spinner() {
-  return (
-
-    <div className="loader">
-    </div>
-  )
+  return <div className="loader"></div>;
 }

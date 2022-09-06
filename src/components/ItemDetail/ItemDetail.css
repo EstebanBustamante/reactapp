@@ -1,9 +1,9 @@
-.swal2-container.swal2-top-end>.swal2-popup{
+.swal2-container.swal2-top-end > .swal2-popup {
   background-color: rgb(0, 0, 0);
   color: rgb(117, 117, 117);
 }
-.swal2-icon.swal2-success .swal2-success-ring{
-  border: .25rem solid orange !important;
+.swal2-icon.swal2-success .swal2-success-ring {
+  border: 0.25rem solid orange !important;
   position: absolute;
   z-index: 2;
   top: -0.25em;
@@ -17,36 +17,36 @@
   border-color: orange !important;
   color: orange !important;
 }
-.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-long{
+.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-long {
   background-color: orange;
 }
-.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-tip{
+.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-tip {
   background-color: orange;
 }
 
-.swal2-container.swal2-center>.swal2-popup{
+.swal2-container.swal2-center > .swal2-popup {
   background-color: rgb(0, 0, 0);
   color: rgb(117, 117, 117);
 }
 .swal2-styled.swal2-confirm:hover {
   background-color: rgb(255, 123, 0);
 }
-button.swal2-styled.swal2-confirm{
+button.swal2-styled.swal2-confirm {
   background-color: orange;
   color: black;
-  border-color:orange;
+  border-color: orange;
 }
 
-.swal2-icon.swal2-error.swal2-icon-show  {
+.swal2-icon.swal2-error.swal2-icon-show {
   border-color: rgb(255, 115, 0);
   color: rgb(255, 115, 0);
 }
-.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left] {
-background-color: rgb(255, 123, 0);
-}
-.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right] {
+.swal2-icon.swal2-error [class^="swal2-x-mark-line"][class$="left"] {
   background-color: rgb(255, 123, 0);
-  }
+}
+.swal2-icon.swal2-error [class^="swal2-x-mark-line"][class$="right"] {
+  background-color: rgb(255, 123, 0);
+}
 h3 {
   margin: 0;
   padding-bottom: 20px;
@@ -71,7 +71,6 @@ h3 {
 }
 
 .containerDetailsImg img {
-  
   border-radius: 25px;
 }
 
@@ -88,7 +87,7 @@ h3 {
   font-weight: bold;
 }
 
-.group-price-count{
+.group-price-count {
   display: flex;
   flex-direction: column;
 }

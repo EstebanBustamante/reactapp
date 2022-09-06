@@ -114,6 +114,7 @@ export default function UserForm({ cart, cantidad }) {
           <button type="submit" >
             Finalizar Compra
           </button>
+          <button type="reset">Vaciar Formulario</button>
         </div>
       </form>
     </div>

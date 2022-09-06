@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, addDoc } from 'firebase/firestore';
-import itemsData from '../data/data'
+import { getFirestore, collection, addDoc } from "firebase/firestore";
+import itemsData from "../data/data";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAqAlSGKZeKsRCmMPe4tz_Ums3u3myclRM",
@@ -8,9 +8,8 @@ const firebaseConfig = {
   projectId: "my-react-app-f1edd",
   storageBucket: "my-react-app-f1edd.appspot.com",
   messagingSenderId: "856389624825",
-  appId: "1:856389624825:web:602aafc35c28a1112c1328"
+  appId: "1:856389624825:web:602aafc35c28a1112c1328",
 };
-
 
 const app = initializeApp(firebaseConfig);
 const firestoreDB = getFirestore(app);

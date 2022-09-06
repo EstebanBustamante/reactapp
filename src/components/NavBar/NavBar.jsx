@@ -1,4 +1,3 @@
-import logo from '../../images/logo.png'
 import "./NavBar.css";
 import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
@@ -6,8 +5,8 @@ import { Link } from "react-router-dom";
 function NavBar() {
   return (
     <div className="navBar">
-      <Link to="/">
-        <img className="logo" src={logo} alt="logo" />
+      <Link to="/" class="inicio">
+        Inicio
       </Link>
       <ul>
         <li>
@@ -16,10 +15,6 @@ function NavBar() {
         <li>
           <Link to="/categorias/Sandwich">Variedad</Link>
         </li>
-        <li>
-          <a href="experiencia.html">Tu experiencia con nosotros</a>
-        </li>
-
         <li>
           <CartWidget />
         </li>
